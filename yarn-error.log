@@ -1,20 +1,20 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add pizzip
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add eslint
 
 PATH: 
-  /home/pham.tuan.anh/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/pham.tuan.anh/.rvm/bin:/home/pham.tuan.anh/.composer/vendor/bin:/home/pham.tuan.anh/.rvm/bin:/home/pham.tuan.anh/.composer/vendor/bin:/home/pham.tuan.anh/.rvm/bin
+  /home/anhpt/bin:/usr/local/bin:/home/anhpt/.nvm/versions/node/v12.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/anhpt/.composer/vendor/bin
 
 Yarn version: 
-  1.22.4
+  1.17.3
 
 Node version: 
-  12.18.2
+  10.16.0
 
 Platform: 
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/pham.tuan.anh/RMS/test/node_modules/docxtemplater/.editorconfig'
+  Error: EACCES: permission denied, unlink '/home/anhpt/RMS/adonis/node_modules/.yarn-integrity'
 
 npm manifest: 
   {
@@ -39,6 +39,7 @@ npm manifest:
       "@adonisjs/auth": "^3.0.7",
       "@adonisjs/bodyparser": "^2.0.5",
       "@adonisjs/cors": "^1.0.7",
+      "@adonisjs/drive": "^1.0.4",
       "@adonisjs/fold": "^4.0.9",
       "@adonisjs/framework": "^5.0.9",
       "@adonisjs/ignitor": "^2.0.8",
@@ -46,7 +47,9 @@ npm manifest:
       "@adonisjs/session": "^1.0.27",
       "@adonisjs/shield": "^1.0.8",
       "docxtemplater": "^3.19.6",
-      "mysql": "^2.18.1"
+      "mysql": "^2.18.1",
+      "pizzip": "^3.0.6",
+      "xlsx-template": "^1.3.0"
     },
     "devDependencies": {},
     "autoload": {
@@ -117,6 +120,13 @@ Lockfile:
     version "1.0.7"
     resolved "https://registry.yarnpkg.com/@adonisjs/cors/-/cors-1.0.7.tgz#9b7565ad0b80215c620e8864b4af8651220a527c"
     integrity sha512-jBO+bI/zdydAXURL02gQxXB57L5+eV2MUYp7zmDrVa12M6mQPMRz5TC2F7a0Kknx9JUr5dsl4+eN0XNfe/8sWQ==
+  
+  "@adonisjs/drive@^1.0.4":
+    version "1.0.4"
+    resolved "https://registry.yarnpkg.com/@adonisjs/drive/-/drive-1.0.4.tgz#0dd2a3a5be7bf60fe80bc03d066c48eca9251ade"
+    integrity sha512-p2Ot+ylOwtGV6gHIKIMJG0M+AxBatjnqv+UOrUW3Y8xsyN9bKg9khZTEqn7WrHUAlmeS4WUR5T68KIaxuXgRDw==
+    dependencies:
+      "@slynova/flydrive" "^0.3.1"
   
   "@adonisjs/fold@^4.0.9":
     version "4.0.9"
@@ -245,6 +255,16 @@ Lockfile:
       colorspace "1.1.x"
       enabled "2.0.x"
       kuler "^2.0.0"
+  
+  "@slynova/flydrive@^0.3.1":
+    version "0.3.1"
+    resolved "https://registry.yarnpkg.com/@slynova/flydrive/-/flydrive-0.3.1.tgz#7d89c43a90ef8599b29d5f7aadd9e82b6904e8ce"
+    integrity sha512-/C3chxZRqonxjQwj70WOyqtw0JGjBr6rjvkcrGlDedUXi5YoiJiTVHwD4ry6tHJKwOi3PtxpWO9RZwSKElVWzw==
+    dependencies:
+      create-output-stream "0.0.1"
+      fs-extra "^6.0.0"
+      node-exceptions "^3.0.0"
+      resetable "^1.0.2"
   
   "@types/bluebird@^3.5.26":
     version "3.5.32"
@@ -853,6 +873,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
     integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
   
+  create-output-stream@0.0.1:
+    version "0.0.1"
+    resolved "https://registry.yarnpkg.com/create-output-stream/-/create-output-stream-0.0.1.tgz#e0ac31e27defeae0e4f699c0edb9c6558c9fa5ab"
+    integrity sha1-4Kwx4n3v6uDk9pnA7bnGVYyfpas=
+    dependencies:
+      mkdirp "^0.5.1"
+  
   cross-env@^5.1.0:
     version "5.2.1"
     resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.2.1.tgz#b2c76c1ca7add66dc874d11798466094f551b34d"
@@ -988,6 +1015,13 @@ Lockfile:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
     integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+  
+  elementtree@0.1.6:
+    version "0.1.6"
+    resolved "https://registry.yarnpkg.com/elementtree/-/elementtree-0.1.6.tgz#2ac4c46ea30516c8c4cbdb5e3ac7418e592de20c"
+    integrity sha1-KsTEbqMFFsjEy9teOsdBjlkt4gw=
+    dependencies:
+      sax "0.3.5"
   
   enabled@2.0.x:
     version "2.0.0"
@@ -1192,6 +1226,15 @@ Lockfile:
     version "0.5.2"
     resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
     integrity sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
+  
+  fs-extra@^6.0.0:
+    version "6.0.1"
+    resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.1.tgz#8abc128f7946e310135ddc93b98bddb410e7a34b"
+    integrity sha512-GnyIkKhhzXZUWFCaJzvyDLEEgDkPfb4/TPvJCJVuS8MWZgoSsErf++QpiAlDnKFcqhRlm+tIOcencCjyJE6ZCA==
+    dependencies:
+      graceful-fs "^4.1.2"
+      jsonfile "^4.0.0"
+      universalify "^0.1.0"
   
   fs-extra@^7.0.0:
     version "7.0.1"
@@ -1558,6 +1601,13 @@ Lockfile:
       lodash.once "^4.0.0"
       ms "^2.1.1"
       semver "^5.6.0"
+  
+  jszip@^2.6.1:
+    version "2.6.1"
+    resolved "https://registry.yarnpkg.com/jszip/-/jszip-2.6.1.tgz#b88f3a7b2e67a2a048152982c7a3756d9c4828f0"
+    integrity sha1-uI86ey5noqBIFSmCx6N1bZxIKPA=
+    dependencies:
+      pako "~1.0.2"
   
   jwa@^1.4.1:
     version "1.4.1"
@@ -2063,6 +2113,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
     integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
   
+  pako@~1.0.2:
+    version "1.0.11"
+    resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
+    integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
+  
   parse-filepath@^1.0.1:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/parse-filepath/-/parse-filepath-1.0.2.tgz#a632127f53aaf3d15876f5872f3ffac763d6c891"
@@ -2123,6 +2178,13 @@ Lockfile:
     version "4.0.1"
     resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
     integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
+  
+  pizzip@^3.0.6:
+    version "3.0.6"
+    resolved "https://registry.yarnpkg.com/pizzip/-/pizzip-3.0.6.tgz#223485511f9e23abbb2888fd67734e12fc7861a8"
+    integrity sha512-CYmQJQ6ShNhScp2zrpGetRfamQ2CtUdsfcXaauqsQ0h/HVdQTTlHNUaNzMO0i+l8XTNctHJ6PrmFP+YZoF4iZw==
+    dependencies:
+      pako "~1.0.2"
   
   platform@^1.3.1:
     version "1.3.6"
@@ -2485,7 +2547,7 @@ Lockfile:
       caller-path "^0.1.0"
       resolve-from "^1.0.0"
   
-  resetable@^1.0.3:
+  resetable@^1.0.2, resetable@^1.0.3:
     version "1.0.3"
     resolved "https://registry.yarnpkg.com/resetable/-/resetable-1.0.3.tgz#0b8370bec2b921da04db0b22df8c9640fe399420"
     integrity sha512-AJuhrcU5TVUaM5j0wSjZXlzt0Qb5pai7nDI+klgv7deuSHy5Kom7ovwBt5tMMO3XmJ9YYSCbKhkgDJHL4MEerQ==
@@ -2548,6 +2610,11 @@ Lockfile:
     version "2.1.2"
     resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
     integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
+  
+  sax@0.3.5:
+    version "0.3.5"
+    resolved "https://registry.yarnpkg.com/sax/-/sax-0.3.5.tgz#88fcfc1f73c0c8bbd5b7c776b6d3f3501eed073d"
+    integrity sha1-iPz8H3PAyLvVt8d2ttPzUB7tBz0=
   
   scmp@2.0.0:
     version "2.0.0"
@@ -3079,6 +3146,14 @@ Lockfile:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
     integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+  
+  xlsx-template@^1.3.0:
+    version "1.3.0"
+    resolved "https://registry.yarnpkg.com/xlsx-template/-/xlsx-template-1.3.0.tgz#88c3ed24eef87fb162453ff96aa3ab4103de09bb"
+    integrity sha512-oYxv6oGqYiJRvOM0dgF1JZ1w4s1BjpZjk9Vc+YG8NsRqHw9p8NhbV4nqftOBtu8FZpdsaPgv0ZK7yONNsi2AtA==
+    dependencies:
+      elementtree "0.1.6"
+      jszip "^2.6.1"
   
   xmldom@^0.3.0:
     version "0.3.0"
