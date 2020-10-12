@@ -16,7 +16,11 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+Route.group(() => {
+  Route.get('web-init', 'WebInitController.index')
+  Route.get('export-word', 'ExportController.exportWord')
+  Route.get('export-excel', 'ExportController.exportExcel')
 
-Route.get('export-word', 'ExportController.exportWord')
-Route.get('export-excel', 'ExportController.exportExcel')
+  Route.get('social/google', 'LoginController.redirect')
+  Route.get('social/google/callback', 'LoginController.callback')
+}).prefix('api')
